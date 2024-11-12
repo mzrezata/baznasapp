@@ -1,0 +1,72 @@
+name: myapp
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.4
+  firebase_auth: ^5.3.1
+  firebase_storage: ^12.3.3
+  url_launcher: ^6.1.7
+  flutter_launcher_icons: ^0.14.1
+  carousel_slider: ^4.0.0
+  image_picker: ^1.1.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  
+flutter_launcher_icons:
+  android: true
+  image_path: "gambar/icon_baznas.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "gambar/icon_baznas.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "gambar/icon_baznas.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "gambar/icon_baznas.png"
+
+flutter:
+  uses-material-design: true
+
+  # Menambahkan gambar lokal ke bagian assets
+  assets:
+    - assets/images/Logo.png
+    - assets/images/baznas_logo.png
+    - assets/images/berita1.jpg
+    - assets/images/berita2.jpg
+    - assets/images/berita3.jpeg
+    - assets/images/berita4.jpg
+    - assets/images/cr7.jpeg
+    - assets/images/jhony.jpeg
+    - assets/images/jordy.jpeg
+    - assets/images/infaq.jpg
+    - assets/images/sedekah.jpg
+    - assets/images/petanizakat.jpg
+    - assets/images/logo_baznas.png
+    - assets/images/CSIMAGE1.png
+    - assets/images/CSIMAGE2.png
+    - assets/images/CSIMAGE3.png
+    - assets/images/CSIMAGE4.png
+    - assets/images/CSIMAGE5.png
+    - assets/images/iconzakat.png
+    - assets/images/iconsedekah.png
+    - assets/images/iconinfak.png

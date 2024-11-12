@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "190995923603",
+    "project_id": "baznas-742af",
+    "storage_bucket": "baznas-742af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190995923603:android:28053a3300c626393d0366",
+        "android_client_info": {
+          "package_name": "com.exa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU_MZySi9rRPjvcv3_SksZomAWQjLza7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190995923603:android:d088b190465a271b3d0366",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU_MZySi9rRPjvcv3_SksZomAWQjLza7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
