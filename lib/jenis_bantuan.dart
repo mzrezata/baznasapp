@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/user/upload.dart';
+import 'package:myapp/prog_kemanuisaan.dart';
+import 'package:myapp/progkesehatan.dart';
+import 'package:myapp/progpenddakwah.dart';
 
 class JenisBantuan extends StatelessWidget {
   @override
@@ -7,7 +9,7 @@ class JenisBantuan extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 10, 108, 23),
         elevation: 0,
         title: Image.asset(
           'assets/images/baznas_logo.png', // Replace with your Baznas logo
@@ -32,46 +34,37 @@ class JenisBantuan extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               children: [
                 buildProgramCard(
-                    context, 'Pengajuan bantuan Baznas Untuk keluarga'),
+                  context, 
+                  'Perogram Kemanusiaan', 
+                  ProgKemanuisaan(),
+                ),
                 SizedBox(height: 40),
                 buildProgramCard(
-                    context, 'Pengajuan bantuan Baznas Untuk Korporasi'),
+                  context, 
+                  'Program Kesehatan', 
+                  Progkesehatan(),
+                ),
                 SizedBox(height: 40),
                 buildProgramCard(
-                    context, 'Pengajuan bantuan Baznas Untuk Perorangan'),
+                  context, 
+                  'Perogram Pendidikan dan Dakwah', 
+                   pendidakwah(),
+                ),
                 SizedBox(height: 40),
               ],
             ),
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.article),
-            label: 'Berita',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt),
-            label: 'Program',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Akun',
-          ),
-        ],
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
-      ),
     );
   }
 
-  Widget buildProgramCard(BuildContext context, String text) {
+  Widget buildProgramCard(BuildContext context, String text, Widget targetPage) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => UploadScreen()),
+          MaterialPageRoute(builder: (context) => targetPage),
         );
       },
       child: Container(

@@ -86,7 +86,7 @@ class LoginScreen extends StatelessWidget {
                                 password: kataSandiController.text,
                               );
 
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => halamanutama()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => HalamanUtama()));
                             } catch (e) {
                               print("Error: $e");
                             }

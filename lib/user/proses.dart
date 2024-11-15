@@ -36,7 +36,7 @@ class Proses extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => halamanutama()),
+                    MaterialPageRoute(builder: (context) => HalamanUtama()),
                   );
                 },
                 child: Text('KEMBALI'),

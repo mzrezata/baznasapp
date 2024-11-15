@@ -39,8 +39,8 @@ class HalamanProfil extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.black,
-                  backgroundColor: Colors.white, // Warna teks
+                  foregroundColor: Colors.white,
+                  backgroundColor: Color.fromARGB(255, 14, 149, 45), // Warna teks
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),

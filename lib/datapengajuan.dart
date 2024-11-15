@@ -12,6 +12,7 @@ class datapengajuan extends StatelessWidget {
             hintText: 'Cari',
             prefixIcon: Icon(Icons.search),
             border: InputBorder.none,
+            
           ),
         ),
         backgroundColor: Colors.white,

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/jenis_bantuan.dart';
+import 'package:myapp/datapengajuan.dart';
 import 'package:myapp/user/infak.dart';
 import 'package:myapp/user/menuberita.dart';
-import 'package:myapp/profil.dart';
 import 'package:myapp/user/sedekah.dart';
-import 'package:myapp/user/upload.dart';
 import 'package:myapp/user/zakat.dart';
 
-class HalamanUtama extends StatelessWidget {
+class HalamanUtamaAdmin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,45 +16,18 @@ class HalamanUtama extends StatelessWidget {
         leading: PopupMenuButton<String>(
           icon: Icon(Icons.menu, color: Colors.black),
           onSelected: (value) {
-            if (value == 'Pengajuan') {
+            if (value == 'Data Pengajuan') {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => UploadScreen()),
-              );
-            } else if (value == 'Jenis Bantuan') {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => JenisBantuan()),
-              );
-            } else if (value == 'Menu Berita') {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Menuberita()),
-              );
-            } else if (value == 'Profil') {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HalamanProfil()),
+                MaterialPageRoute(builder: (context) => datapengajuan()),
               );
             }
           },
           itemBuilder: (BuildContext context) {
             return [
               PopupMenuItem(
-                value: 'Pengajuan',
-                child: Text('Pengajuan'),
-              ),
-              PopupMenuItem(
-                value: 'Jenis Bantuan',
-                child: Text('Jenis Bantuan'),
-              ),
-              PopupMenuItem(
-                value: 'Menu Berita',
-                child: Text('Berita'),
-              ),
-              PopupMenuItem(
-                value: 'Profil',
-                child: Text('Profil'),
+                value: 'Data Pengajuan',
+                child: Text('Data Pengajuan'),
               ),
             ];
           },
@@ -77,6 +48,7 @@ class HalamanUtama extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 14),
+            // Tambahan gambar di bawah AppBar
             Image.asset(
               'assets/images/CSIMAGE2.png', // Ganti dengan path gambar Anda
               height: 200,

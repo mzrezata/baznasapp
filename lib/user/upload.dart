@@ -23,7 +23,8 @@ class _UploadScreenState extends State<UploadScreen> {
 
   // Fungsi untuk memilih dan mengupload gambar
   Future<void> _pickAndUploadImage(String label) async {
-    final XFile? pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+    final XFile? pickedFile =
+        await _picker.pickImage(source: ImageSource.gallery);
     if (pickedFile != null) {
       // Upload ke Firebase Storage
       String fileName = '${label}_${DateTime.now()}.jpg';
@@ -32,7 +33,7 @@ class _UploadScreenState extends State<UploadScreen> {
 
       // Mendapatkan URL gambar
       String downloadUrl = await ref.getDownloadURL();
-      
+
       setState(() {
         switch (label) {
           case 'KTP':
@@ -65,7 +66,11 @@ class _UploadScreenState extends State<UploadScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Persyaratan'),
+        backgroundColor: Color.fromARGB(255, 10, 108, 23),
+        title: const Text(
+          'Persyaratan',
+          style: TextStyle(color: Colors.white), // Warna teks menjadi putih
+        ),
         centerTitle: true,
       ),
       body: Padding(
@@ -90,6 +95,8 @@ class _UploadScreenState extends State<UploadScreen> {
                 },
                 child: const Text('SELESAI'),
                 style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 14, 149, 45),
+                  foregroundColor: Colors.white,
                   minimumSize: const Size(double.infinity, 50),
                 ),
               ),
@@ -121,6 +128,10 @@ class _UploadScreenState extends State<UploadScreen> {
           const SizedBox(width: 10),
           ElevatedButton(
             onPressed: () => _pickAndUploadImage(label), // Fungsi upload
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 14, 149, 45),
+              foregroundColor: Colors.white,
+            ),
             child: const Text('UPLOAD'),
           ),
         ],

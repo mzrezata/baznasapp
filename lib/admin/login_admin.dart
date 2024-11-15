@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/admin/adminhalamanutama.dart';
 import 'package:myapp/admin/daftar_admin.dart';
-import 'package:myapp/halamanutama.dart';
 
 class AdminLoginScreen extends StatelessWidget {
   final TextEditingController usernameController = TextEditingController();
@@ -105,7 +105,7 @@ class AdminLoginScreen extends StatelessWidget {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => halamanutama()),
+                                      builder: (context) => HalamanUtamaAdmin()),
                                 );
                               } else {
                                 print(

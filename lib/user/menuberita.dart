@@ -4,9 +4,9 @@ class Menuberita extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 10, 108, 23),
         elevation: 0,
         centerTitle: true,
         title: Row(
